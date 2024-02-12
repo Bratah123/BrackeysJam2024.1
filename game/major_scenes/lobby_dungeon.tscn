@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://csm3ehi8apalu"]
 
-[ext_resource type="Texture2D" uid="uid://c00wqeydiuwn3" path="res://assets/tiles/stone_tile.webp" id="1_ampu6"]
+[ext_resource type="Texture2D" uid="uid://yjm83ho17gjc" path="res://assets/tiles/stone_tile.webp" id="1_ampu6"]
 [ext_resource type="PackedScene" uid="uid://ch65wf3nrge37" path="res://game/entities/player.tscn" id="1_k702k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynp81"]
