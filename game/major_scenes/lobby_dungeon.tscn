@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://csm3ehi8apalu"]
+
+[sub_resource type="TileSet" id="TileSet_t4v0j"]
+tile_size = Vector2i(64, 64)
+
+[node name="LobbyDungeon" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_t4v0j")
+rendering_quadrant_size = 32
+format = 2
