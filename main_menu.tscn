@@ -36,10 +36,10 @@ grow_vertical = 2
 text = "Play Game
 "
 
-[node name="Button" type="Button" parent="Control"]
+[node name="HelpButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 660.0
+offset_left = 662.0
 offset_top = 400.0
-offset_right = 704.0
+offset_right = 706.0
 offset_bottom = 431.0
 text = "Help"
