@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://csm3ehi8apalu"]
+[gd_scene load_steps=3 format=3 uid="uid://csm3ehi8apalu"]
+
+[ext_resource type="PackedScene" uid="uid://ch65wf3nrge37" path="res://game/entities/player.tscn" id="1_k702k"]
 
 [sub_resource type="TileSet" id="TileSet_t4v0j"]
 tile_size = Vector2i(64, 64)
@@ -9,3 +11,6 @@ tile_size = Vector2i(64, 64)
 tile_set = SubResource("TileSet_t4v0j")
 rendering_quadrant_size = 32
 format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_k702k")]
+position = Vector2(454, 220)
