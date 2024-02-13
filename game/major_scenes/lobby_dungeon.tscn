@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://csm3ehi8apalu"]
+[gd_scene load_steps=7 format=3 uid="uid://csm3ehi8apalu"]
 
-[ext_resource type="Texture2D" uid="uid://yjm83ho17gjc" path="res://assets/tiles/stone_tile.webp" id="1_ampu6"]
+[ext_resource type="Texture2D" uid="uid://b444ctk66wtb6" path="res://assets/tiles/stone_tile.webp" id="1_ampu6"]
 [ext_resource type="PackedScene" uid="uid://ch65wf3nrge37" path="res://game/entities/player.tscn" id="1_k702k"]
-[ext_resource type="PackedScene" uid="uid://ha437jpjy64r" path="res://assets/doors/door.tscn" id="3_aor43"]
+[ext_resource type="PackedScene" path="res://assets/doors/door.tscn" id="3_aor43"]
+[ext_resource type="PackedScene" uid="uid://cepug4comhe3n" path="res://game/entities/test_npc.tscn" id="3_nj2ob"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynp81"]
 texture = ExtResource("1_ampu6")
@@ -26,3 +27,7 @@ position = Vector2(454, 220)
 
 [node name="Door" parent="." instance=ExtResource("3_aor43")]
 position = Vector2(417, 86)
+
+[node name="Npc" parent="." instance=ExtResource("3_nj2ob")]
+position = Vector2(337, 220)
+scale = Vector2(2, 2)
