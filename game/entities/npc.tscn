@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bojhbdvluw5at"]
+
+[ext_resource type="Script" path="res://game/entities/npc.gd" id="1_qmbq4"]
+[ext_resource type="Texture2D" uid="uid://dwfysjcmtgppe" path="res://assets/text_bubble.webp" id="2_f23nn"]
+[ext_resource type="FontFile" uid="uid://cxldipysxrhqa" path="res://assets/fonts/Minecraft.ttf" id="3_ived1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5qjmx"]
+radius = 13.1529
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iwx34"]
+radius = 35.0143
+
+[node name="Npc" type="StaticBody2D"]
+script = ExtResource("1_qmbq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="NpcCollisionCircle" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5qjmx")
+
+[node name="DialogueDetectionArea" type="Area2D" parent="."]
+
+[node name="DialogueCollisionCircle" type="CollisionShape2D" parent="DialogueDetectionArea"]
+shape = SubResource("CircleShape2D_iwx34")
+
+[node name="Dialogue" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Dialogue"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -40.0
+offset_right = 45.0
+texture = ExtResource("2_f23nn")
+
+[node name="Text" type="RichTextLabel" parent="Dialogue/NinePatchRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 30.0
+offset_bottom = 31.0
+scale = Vector2(0.6, 0.6)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_ived1")
+text = "E"
+
+[connection signal="body_entered" from="DialogueDetectionArea" to="." method="_on_dialogue_detection_area_body_entered"]
+[connection signal="body_exited" from="DialogueDetectionArea" to="." method="_on_dialogue_detection_area_body_exited"]
