@@ -7,13 +7,14 @@
 size = Vector2(58, 61)
 
 [node name="Door" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_15lx5")
 
 [node name="DoorImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_877jl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0.5)
+position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_nnrho")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

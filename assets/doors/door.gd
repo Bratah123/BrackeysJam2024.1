@@ -1,6 +1,6 @@
 extends Area2D
 
-var open = true
+var open = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,17 +9,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if open:
-		$DoorImage.texture = load("res://assets/doors/open_door.webp")
-	else:
-		$DoorImage.texture = load("res://assets/doors/closed_door.webp")
 	if Input.is_action_pressed("interact") and open:
 		print("teleporting")
 		
 func _on_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.name == "Player":
 		open = true 
-
+		$DoorImage.texture = load("res://assets/doors/closed_door.webp")
+		
 func _on_body_exited(body):
-	if body.is_in_group("Player"):
+	if body.name == "Player":
 		open = false
+		$DoorImage.texture = load("res://assets/doors/open_door.webp")

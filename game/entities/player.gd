@@ -14,3 +14,5 @@ func _physics_process(delta):
 		$PlayerSprite.flip_h = true
 	elif velocity.x < 0:
 		$PlayerSprite.flip_h = false
+		
+
